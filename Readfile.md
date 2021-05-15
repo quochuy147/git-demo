@@ -2,13 +2,13 @@
 
 void title()
 {
-    printf("   ");
-    for(int i=0; i<51; ++i)
+    printf("  ");
+    for(int i=0; i<52; ++i)
     {
         printf("%c",196);
     }
-    printf("ASCII____TABLE");
-    for(int i=0; i<51; ++i)
+    printf("ASCII___TABLE");
+    for(int i=0; i<52; ++i)
     {
         printf("%c",196);
     }
@@ -99,8 +99,7 @@ char* getname(char c)
 
 int main()
 {
-    title(); 
-
+    title();
     for(int i=0;i<4;++i){
     printf("%6s %6s %6s %6s | ","dec","hex","oct","char");
     }
@@ -116,6 +115,7 @@ int main()
             c=(char)i;
             printf("%6d %6X %6o %6s | ",i,i,i,getname(c));
         }
+        printf("\n");
         i-=96;
     }
 }
