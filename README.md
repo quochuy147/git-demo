@@ -4,7 +4,7 @@
 
 int main()
 {
-    char s[]="Huy dep trai thanh lich vo dich cap vu tru :V ";
+    char s[]="quochuy147";
     int size;
     //fgets(s,10,stdin);
     size=strlen(s);
