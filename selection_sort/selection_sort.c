@@ -1,0 +1,60 @@
+// Selection Sort
+// Sort from small to big
+
+#include <stdio.h>
+#include <stdlib.h>
+
+const int limit = 1000;
+
+int* gen_array(int size, int limit)
+{
+    int* arr = calloc(size, sizeof(int));
+    for (int i = 0; i < size; i++) {
+        int n = rand() % limit;
+        arr[i] = n;
+    }
+    return arr;
+}
+
+void print_array(int* arr, int size)
+{
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+void selection_sort(int* arr, int size)
+{
+    for(int i = 0; i < size; ++i) {
+        for(int j = i+1; j < size; ++j) {
+            if( arr[i] > arr[j]) {
+                int memory = arr[i];
+                arr[i] = arr[j];
+                arr[j] = memory;
+            }
+        }
+    }
+}
+
+int main()
+{
+    time_t t;
+    srand((unsigned)time(&t));
+    printf("Input size of array:\n");
+    int size;
+    scanf("%d", &size);
+
+    int* arr = gen_array(size, limit);
+
+    printf("Generated array:\n");
+    print_array(arr, size);
+
+    selection_sort(arr, size);
+
+    printf("Sorted array:\n");
+    print_array(arr, size);
+
+    free(arr);
+    return 0;
+}
