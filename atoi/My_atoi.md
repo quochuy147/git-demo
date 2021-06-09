@@ -1,3 +1,5 @@
+#My_atoi
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include<string.h>
@@ -35,3 +37,4 @@ int main()
     printf("My_atoi : %d",my_atoi(str));
     return 0;
 }
+```

@@ -1,3 +1,4 @@
+```c
 #include <stdio.h>
 
 void title()
@@ -120,3 +121,4 @@ int main()
         i-=96;
     }
 }
+```
