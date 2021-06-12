@@ -1,4 +1,3 @@
-// Selection Sort
 // Sort from small to big
 
 #include <stdio.h>
@@ -27,11 +26,15 @@ void print_array(int* arr, int size)
 void selection_sort(int* arr, int size)
 {
     for(int i = 0; i < size; ++i) {
-        for(int j = i+1; j < size; ++j) {
-            if( arr[i] > arr[j]) {
-                int memory = arr[i];
-                arr[i] = arr[j];
-                arr[j] = memory;
+        int min = i;
+        for(int j = min+1; j < size; ++j) {
+            if(arr[min] > arr[j]) {
+                min = j;
+            }
+            if(arr[i] > arr[min]) {
+                int memory = arr[min];
+                arr[min] = arr[i];
+                arr[i] = memory;
             }
         }
     }
